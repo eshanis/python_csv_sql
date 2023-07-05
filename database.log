@@ -1,0 +1,975 @@
+2023-06-21 18:40:21,693:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\etl2_classes.py", line 21, in <module>
+    data = pd.read_csv('employeesxxx.csv')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\io\parsers\readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\io\parsers\readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\io\common.py", line 859, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'employeesxxx.csv'
+2023-06-21 18:42:04,617:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\etl2_classes.py", line 78, in <module>
+    connection = db.create_server_connection(ipaddress, username, password, dbname)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\database_class.py", line 22, in create_server_connection
+    host=host_namexx,
+         ^^^^^^^^^^^
+NameError: name 'host_namexx' is not defined
+2023-06-23 12:55:58,087:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\etl2_classes.py", line 81, in <module>
+    status = db.create_database(connection, create_database_query)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\database_class.py", line 35, in create_database
+    cursor = connection.cursor()
+             ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'cursor'
+2023-06-30 15:20:57,564:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'employee_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 125, in <module>
+    populate_table_query = populate_table.format(table_name=table_name, employee_id=row['employee_id']+101,
+                                                                                    ~~~^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'employee_id'
+2023-06-30 15:22:54,000:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'employee_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 124, in <module>
+    populate_table_query = populate_table.format(table_name=table_name, employee_id=row['employee_id']+101,
+                                                                                    ~~~^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'employee_id'
+2023-06-30 15:24:47,986:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'employee_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 126, in <module>
+    populate_table_query = populate_table.format(table_name=table_name, employee_id=row['employee_id']+101,
+                                                                                    ~~~^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'employee_id'
+2023-06-30 15:25:22,615:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'employee_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 126, in <module>
+    populate_table_query = populate_table.format(table_name=table_name, employee_id=row['employee_id']+101,
+                                                                                    ~~~^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'employee_id'
+2023-06-30 15:26:01,814:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'employee_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 126, in <module>
+    populate_table_query = populate_table.format(table_name=table_name, employee_id=row['employee_id']+101,
+                                                                                    ~~~^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'employee_id'
+2023-06-30 15:26:31,978:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'employee_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 126, in <module>
+    populate_table_query = populate_table.format(table_name=table_name, employee_id=row['employee_id']+101,
+                                                                                    ~~~^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'employee_id'
+2023-06-30 15:26:55,537:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'employee_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 126, in <module>
+    populate_table_query = populate_table.format(table_name=table_name, employee_id=row['employee_id']+101,
+                                                                                    ~~~^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'employee_id'
+2023-06-30 15:28:01,051:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'employee_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 128, in <module>
+    populate_table_query = populate_table.format(table_name=table_name, employee_id=row['employee_id']+101,
+                                                                                    ~~~^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'employee_id'
+2023-06-30 15:28:39,984:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'employee_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 128, in <module>
+    populate_table_query = populate_table.format(table_name=table_name, employee_id=row['employee_id']+101,
+                                                                                    ~~~^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'employee_id'
+2023-06-30 15:30:13,894:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'employee_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 128, in <module>
+    populate_table_query = populate_table.format(table_name=table_name, employee_id=row['employee_id']+101,
+                                                                                    ~~~^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'employee_id'
+2023-06-30 15:32:25,562:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'employee_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 128, in <module>
+    populate_table_query = populate_table.format(table_name=table_name, employee_id=row['employee_id']+101,
+                                                                                    ~~~^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'employee_id'
+2023-06-30 15:33:36,177:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'employee_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 124, in <module>
+    populate_table_query = populate_table.format(table_name=table_name, employee_id=row['employee_id']+101,
+                                                                                    ~~~^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'employee_id'
+2023-06-30 15:36:25,175:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'employee_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 125, in <module>
+    populate_table_query = populate_table.format(table_name=table_name, employee_id=row['employee_id']+101,
+                                                                                    ~~~^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'employee_id'
+2023-06-30 15:39:02,385:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'employee_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 126, in <module>
+    populate_table_query = populate_table.format(table_name=table_name, employee_id=row['employee_id']+101,
+                                                                                    ~~~^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'employee_id'
+2023-06-30 15:39:44,086:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'employee_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 127, in <module>
+    populate_table_query = populate_table.format(table_name=table_name, employee_id=row['employee_id']+101,
+                                                                                    ~~~^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'employee_id'
+2023-06-30 15:41:18,862:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'employee_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 128, in <module>
+    populate_table_query = populate_table.format(table_name=table_name, employee_id=row['employee_id']+101,
+                                                                                    ~~~^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'employee_id'
+2023-06-30 15:41:41,117:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'employee_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 129, in <module>
+    populate_table_query = populate_table.format(table_name=table_name, employee_id=row['employee_id']+101,
+                                                                                    ~~~^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'employee_id'
+2023-06-30 15:44:05,919:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'employee_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 129, in <module>
+    populate_table_query = populate_table.format(table_name=table_name, employee_id=row['employee_id']+101,
+                                                                                    ~~~^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'employee_id'
+2023-06-30 15:45:10,238:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'employee_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 129, in <module>
+    populate_table_query = populate_table.format(table_name=table_name, employee_id=row['employee_id']+101,
+                                                                                    ~~~^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'employee_id'
+2023-06-30 15:47:10,639:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'department_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 138, in <module>
+    populate_table_query2 = populate_table2.format(table_name2=table_name2, department_id=row['department_id']+1,
+                                                                                          ~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'department_id'
+2023-06-30 15:50:31,586:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'department_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 138, in <module>
+    populate_table_query2 = populate_table2.format(table_name2=table_name2, department_id=row['department_id']+1,
+                                                                                          ~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'department_id'
+2023-06-30 15:51:19,600:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'department_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 138, in <module>
+    populate_table_query2 = populate_table2.format(table_name2=table_name2, department_id=row['department_id']+1,
+                                                                                          ~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'department_id'
+2023-06-30 15:52:12,878:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'department_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 139, in <module>
+    populate_table_query2 = populate_table2.format(table_name2=table_name2, department_id=row['department_id']+1,
+                                                                                          ~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'department_id'
+2023-06-30 15:52:57,459:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'department_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 139, in <module>
+    populate_table_query2 = populate_table2.format(table_name2=table_name2, department_id=row['department_id']+1,
+                                                                                          ~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'department_id'
+2023-06-30 15:53:45,120:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'department_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 139, in <module>
+    populate_table_query2 = populate_table2.format(table_name2=table_name2, department_id=row['department_id']+1,
+                                                                                          ~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'department_id'
+2023-06-30 15:55:49,036:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'department_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 137, in <module>
+    populate_table_query2 = populate_table2.format(table_name2=table_name2, department_id=row['department_id']+1,
+                                                                                          ~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'department_id'
+2023-06-30 15:56:38,648:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'department_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 140, in <module>
+    populate_table_query2 = populate_table2.format(table_name2=table_name2, department_id=row['department_id']+1,
+                                                                                          ~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'department_id'
+2023-06-30 16:00:15,435:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'department_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 131, in <module>
+    populate_table_query2 = populate_table2.format(table_name2=table_name2, department_id=row['department_id']+1,
+                                                                                          ~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'department_id'
+2023-06-30 16:01:11,325:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'department_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 138, in <module>
+    populate_table_query2 = populate_table2.format(table_name2=table_name2, department_id=row['department_id']+1,
+                                                                                          ~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'department_id'
+2023-06-30 16:01:39,319:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'department_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 138, in <module>
+    populate_table_query2 = populate_table2.format(table_name2=table_name2, department_id=row['department_id']+1,
+                                                                                          ~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'department_id'
+2023-06-30 16:02:36,653:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'department_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 138, in <module>
+    populate_table_query2 = populate_table2.format(table_name2=table_name2, department_id=row['department_id']+1,
+                                                                                          ~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'department_id'
+2023-06-30 16:03:01,743:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'department_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 139, in <module>
+    populate_table_query2 = populate_table2.format(table_name2=table_name2, department_id=row['department_id']+1,
+                                                                                          ~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'department_id'
+2023-06-30 16:03:42,293:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'department_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 139, in <module>
+    populate_table_query2 = populate_table2.format(table_name2=table_name2, department_id=row['department_id'],
+                                                                                          ~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'department_id'
+2023-06-30 16:05:17,465:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'department_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 127, in <module>
+    populate_table_query2 = populate_table2.format(table_name2=table_name2, department_id=row['department_id'] + 1,
+                                                                                          ~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'department_id'
+2023-06-30 16:06:53,351:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'department_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 127, in <module>
+    populate_table_query2 = populate_table2.format(table_name2=table_name2, department_id=row['department_id'] + 1,
+                                                                                          ~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'department_id'
+2023-06-30 16:07:57,252:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3652, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'department_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql\etl2_classes.py", line 128, in <module>
+    populate_table_query2 = populate_table2.format(table_name2=table_name2, department_id=row['department_id'] + 1,
+                                                                                          ~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3654, in get_loc
+    raise KeyError(key) from err
+KeyError: 'department_id'

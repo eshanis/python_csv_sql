@@ -1,0 +1,6 @@
+2023-06-13 15:55:32,489:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eshani.shah\PycharmProjects\pythonProject2\employee_info_copy.py", line 109, in generate_data
+    writer = csv.writer(file2)
+                        ^^^^^
+UnboundLocalError: cannot access local variable 'file2' where it is not associated with a value
