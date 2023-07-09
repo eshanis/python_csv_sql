@@ -99,14 +99,14 @@ try:
       dob VARCHAR(40) NOT NULL,
       dept_id int not null,
       new_column VARCHAR(40) NOT NULL,
-      FOREIGN KEY (dept_id) REFERENCES departments(department_id)
+      FOREIGN KEY (dept_id) REFERENCES departments(dept_id)
       );
      """.format(placeholder=table_name)
 
     create_department_table_query = """
     CREATE TABLE IF NOT EXISTS {placeholder} (
-      department_id INT PRIMARY KEY,
-      department_name VARCHAR(40) NOT NULL
+      dept_id INT PRIMARY KEY,
+      dept_name VARCHAR(40) NOT NULL
       );
      """.format(placeholder=table_name2)
 
@@ -121,14 +121,14 @@ try:
     """
 
     populate_table2 = """
-    INSERT INTO {table_name2} VALUES ({department_id},'{department_name}')
+    INSERT INTO {table_name2} VALUES ({dept_id},'{dept_name}')
     """
     #print(df2)
     for index, row in df2.iterrows():
         print(index,row)
         print(populate_table2)
-        populate_table_query2 = populate_table2.format(table_name2=table_name2, department_id=row['dept_id'],
-                                                       department_name=row['dept_name'])
+        populate_table_query2 = populate_table2.format(table_name2=table_name2, dept_id=row['dept_id'],
+                                                       dept_name=row['dept_name'])
         print(populate_table_query2)
         status2 = db.execute_query(connection, populate_table_query2)
 
@@ -136,7 +136,7 @@ try:
         print('in df iterrows')
         #print(row)
         #print(populate_table)
-        populate_table_query = populate_table.format(table_name=table_name, employee_id=row['employee_id']+101,
+        populate_table_query = populate_table.format(table_name=table_name, employee_id=row['employee_id'],
                                                      first_name=row['first_name'], last_name=row['last_name'],
                                                      manager_name=row['manager_name'], salary=row['salary'], age=row['age'],
                                                      doj=row['doj'], dob=row['dob'], dept_id=row['dept_id'],new_column=row['new_column'])

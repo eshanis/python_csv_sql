@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f062df3-065c-461d-8b80-290002af6a43" name="Changes" comment="" />
+    <list default="true" id="2f062df3-065c-461d-8b80-290002af6a43" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.log" beforeDir="false" afterPath="$PROJECT_DIR$/database.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/database_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee_info_old.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/employees.csv" beforeDir="false" afterPath="$PROJECT_DIR$/employees.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employees_no_dept_id.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/etl2_classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/etl2_classes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/queries.py" beforeDir="false" afterPath="$PROJECT_DIR$/queries.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,25 +27,30 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="2Qm5E2aSSq5C0fS6JcBHf3jUP3k" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/eshani.shah/PycharmProjects/pythonProject2",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/eshani.shah/PycharmProjects/pythonProject3_sql&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "Python"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Python&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\eshani.shah\PycharmProjects\pythonProject3_sql" />
       <recent name="C:\Users\eshani.shah\PycharmProjects\pythonProject2" />
     </key>
   </component>

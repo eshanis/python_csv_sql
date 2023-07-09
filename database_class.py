@@ -54,7 +54,8 @@ class Database:
             cursor.execute(query)
             results=cursor.fetchall()
             connection.commit()
-            print(results)
+            #print(results)
             print("Query successful")
+            return results
         except Error as err:
             print(f"Error: '{err}'")
